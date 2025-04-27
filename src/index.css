@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+ion-icon {
+    font-size: 24px;
+  }
