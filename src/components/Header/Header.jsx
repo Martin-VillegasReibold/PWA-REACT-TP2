@@ -3,15 +3,15 @@ import { Link } from "react-router";
 import Title from "../Title/Title";
 import Button from "../Button/Button";
 import Input from "../Input/Input";
-const Header = () => {
+const Header = ({ filtro }) => {
   const [categories, setCategories] = useState([]);
   const [showCategories, setShowCategories] = useState("");
   return (
     <nav className="... sticky top-0">
       <div className="relative flex gap-4 justify-between items-center mb-2">
         <Link to={"/"} className="flex gap-2">
-          <img src="\aperture-1142967_1280.webp" className="w-12" alt="Logo" />
-          <Title text={"Name Logo"} />
+          <img src="\klipartz.com.png" className="w-12" alt="Logo" />
+          <Title text={"DinoWiki"} />
         </Link>
 
         <div className="font-bold text-md flex gap-2 items-center">
@@ -28,22 +28,22 @@ const Header = () => {
           </button>
 
           <div className="h-9 bg-gray-700 pt-1.5 px-6 cursor-pointer rounded">
-            <Link to={"/Favorites"}>Favorites</Link>
+            <Link to={"/Favorites"}>Favoritos</Link>
           </div>
         </div>
 
         {showCategories && (
           <div className="absolute right-0 top-14 px-10 pt-6 pb-9 w-full bg-gray-900 text-white z-20">
-            <span>Categories</span>
+            <span>Categorias</span>
             <hr />
             <div>
-              <Link className="font-bol">reactions</Link>
+              <Link className="font-bol">Mas categorias</Link>
             </div>
           </div>
         )}
       </div>
 
-      <Input/>
+      <Input onChange={filtro} />
     </nav>
   );
 };

@@ -9,7 +9,9 @@ const Details = () => {
       <div className="container px-6 py-4 mx-auto">
         <Header />
         <main>
-          <Title text={"Details"} />
+          <span className=" text-4xl  py-8 font-bold flex flex-wrap justify-center">
+            Dinosaurios Favoritos
+          </span>
         </main>
         <div>
           <div className="h-screen"></div>
