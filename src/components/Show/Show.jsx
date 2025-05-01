@@ -5,7 +5,7 @@ import Footer from "../../components/Footer/Footer";
 import DinosaurCard from "../../components/DinosaurCard/DinosaurCard";
 import Subtitle from "../../components/Subtitle/Subtitle";
 
-const Show = ({ texto, homefav }) => {
+const Show = ({ texto, homefav, t }) => {
   const [dinosaurios, setDinosaurios] = useState([]);
   const [filter, setFilter] = useState([]);
   const [favorites, setFavorites] = useState(
@@ -52,7 +52,7 @@ const Show = ({ texto, homefav }) => {
     <div>
       <div className="bg-gray-950 text-white min-h-screen">
         <div className="container px-6 py-4 mx-auto">
-          <Header filtro={fil} />
+          <Header filtro={fil} t={t}/>
           <main>
             <Subtitle text={texto} />
             <div className="py-8 px-4">
@@ -67,12 +67,12 @@ const Show = ({ texto, homefav }) => {
                     />
                   ))
                 ) : (
-                  <p>No se encontraron elementos</p>
+                  <p>{t("notFound")}</p>
                 )}
               </div>
             </div>
           </main>
-          <Footer />
+          <Footer t={t}/>
         </div>
       </div>
     </div>

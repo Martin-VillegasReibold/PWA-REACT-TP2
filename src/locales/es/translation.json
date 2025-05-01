@@ -1,0 +1,33 @@
+{
+    "Home": {
+        "welcome": "¡Investiga sobre los seres de antaño!"
+    },
+    "Favorites": {
+        "title": "Dinosaurios Favoritos"
+    },
+    "Details": {
+        "title": "Detalles"
+    },
+    "Header": {
+        "something": "algo",
+        "options": {
+            "categories": "Categorias",
+            "moreCategories": "Mas categorias"
+        },
+        "favorites": "Favoritos",
+        "input": {
+            "placeholder": "Busqueda por nombre..."
+        }
+    },
+    "Footer": {
+        "itemContainer":{
+            "products": "PRODUCTOS",
+            "resources": "RECURSOS",
+            "team": "NOSOTROS",
+            "support": "SOPORTE"
+        },
+        "rights": "© 2025 Aplicado. Todos los derechos reservados.",
+        "policy": "Terminos. Politica de privacidad"
+    },
+    "notFound": "No se encontraron elementos"
+}

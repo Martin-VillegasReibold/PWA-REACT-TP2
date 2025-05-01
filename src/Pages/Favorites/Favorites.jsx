@@ -1,10 +1,10 @@
 import React from "react";
 import Show from "../../components/Show/Show";
 
-const Favorites = () => {
+const Favorites = ({t}) => {
   return (
     <div>
-      <Show texto={"Dinosaurios Favoritos"} homefav={false} />
+      <Show texto={t("Favorites.title")} homefav={false} t={t} />
     </div>
   );
 };

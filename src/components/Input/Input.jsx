@@ -1,4 +1,4 @@
-const Input = ({ onChange }) => {
+const Input = ({ onChange, t }) => {
   /*
   const handleChange = (evento) => {
     onChange(evento.target.value);
@@ -8,7 +8,7 @@ const Input = ({ onChange }) => {
     <div className="flex relative">
       <input
         onChange={onChange}
-        placeholder="Busqueda por nombre..."
+        placeholder={t("Header.input.placeholder")}
         className="w-full pl-4 pr-14 py-5 text-xl text-white rounded-tl rounded-bl border border-gray-300 outline-none"
       />
       <button className="bg-gray-700 text-white px-4 py-2 rounded-tr rounded-br">

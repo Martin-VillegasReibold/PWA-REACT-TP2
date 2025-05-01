@@ -1,10 +1,10 @@
 import React from "react";
 import Show from "../../components/Show/Show";
 
-const Home = () => {
+const Home = ({t}) => {
   return (
     <div>
-      <Show texto={"¡Investiga sobre los seres de antaño!"} homefav={true} />
+      <Show texto={t("Home.welcome")} homefav={true} t={t} />
     </div>
   );
 };

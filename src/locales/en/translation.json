@@ -1,0 +1,33 @@
+{
+    "Home": {
+        "welcome": "¡Research the beings of yesteryear!"
+    },
+    "Favorites": {
+        "title": "Dinosaurios Favoritos"
+    },
+    "Details": {
+        "title": "Details"
+    },
+    "Header": {
+        "something": "something",
+        "options": {
+            "categories": "Categories",
+            "moreCategories": "More categories"
+        },
+        "favorites": "Favorites",
+        "input": {
+            "placeholder": "Search by name..."
+        }
+    },
+    "Footer": {
+        "itemContainer":{
+            "products": "PRODUCTS",
+            "resources": "RESOURCES",
+            "team": "TEAM",
+            "support": "SUPPORT"
+        },
+        "rights": "© 2025 Applied. All rights reserved.",
+        "policy": "Terms. Politica de privacidad"
+    },
+    "notFound": "No items found"
+}
