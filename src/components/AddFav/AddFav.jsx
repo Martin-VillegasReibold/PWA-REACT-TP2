@@ -1,21 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const AddFav = ({ itemId }) => {
-  const [favorites, setFavorites] = useState(() => {
-    return JSON.parse(localStorage.getItem("favorites")) || [];
-  });
-  /*
-  useEffect(() => {
-    const storedFavorites = localStorage.getItem("favorites");
-    if (storedFavorites) {
-      setFavorites(JSON.parse(storedFavorites));
-    }
-  }, []);
-*/
-  useEffect(() => {
-    localStorage.setItem("favorites", JSON.stringify(favorites));
-  }, [favorites]);
-
+const AddFav = ({ itemId, favorites, setFavorites }) => {
   const toggleFavorite = () => {
     if (favorites.includes(itemId)) {
       setFavorites(favorites.filter((id) => id !== itemId));

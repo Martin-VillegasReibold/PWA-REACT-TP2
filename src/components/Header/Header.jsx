@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router";
 import Title from "../Title/Title";
-import Button from "../Button/Button";
 import Input from "../Input/Input";
 const Header = ({ filtro }) => {
   const [categories, setCategories] = useState([]);

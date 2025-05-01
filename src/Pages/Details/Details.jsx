@@ -1,7 +1,7 @@
-import Title from "../../components/Title/Title";
 import Header from "../../components/Header/Header";
 import { useEffect, useState } from "react";
 import Footer from "../../components/Footer/Footer";
+import Subtitle from "../../components/Subtitle/Subtitle";
 
 const Details = () => {
   return (
@@ -9,14 +9,9 @@ const Details = () => {
       <div className="container px-6 py-4 mx-auto">
         <Header />
         <main>
-          <span className=" text-4xl  py-8 font-bold flex flex-wrap justify-center">
-            Dinosaurios Favoritos
-          </span>
+          <Subtitle text={"Detalles"} />
         </main>
-        <div>
-          <div className="h-screen"></div>
-          <Footer />
-        </div>
+        <Footer />
       </div>
     </div>
   );
