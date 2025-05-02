@@ -1,6 +1,11 @@
 import AddFav from "../AddFav/AddFav";
+import { useTranslation } from "react-i18next";
 
 const DinosaurCard = ({ dinosaur, fav, setfav }) => {
+  const { i18n } = useTranslation();
+  const lang = i18n.language;
+  console.log(lang);
+  
   return (
     <div className="border border-white rounded-lg overflow-hidden shadow-lg bg-gray-900 flex felx-col w-64 p-4">
       <div className="flex-1 flex flex-col">
@@ -13,7 +18,7 @@ const DinosaurCard = ({ dinosaur, fav, setfav }) => {
         <div className="mt-auto text-center">
           <h2 className="text-xl font-bold mb-2">{dinosaur.name}</h2>
           <p className="text-gray-300 text-sm">
-            {dinosaur.description}
+            {dinosaur.description[lang]}
           </p>
         </div>
       </div>
