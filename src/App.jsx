@@ -18,7 +18,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="fixed top-4 right-4 z-50 cursor-pointer">
+      <div className="fixed top-35 right-6 z-50 cursor-pointer">
         <img
           src={flagSrc}
           className="w-10 h-10 hover:scale-110 transition-transform rounded-full shadow-md"

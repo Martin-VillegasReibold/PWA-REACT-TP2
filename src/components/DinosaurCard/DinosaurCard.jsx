@@ -10,10 +10,12 @@ const DinosaurCard = ({ dinosaur, fav, setfav }) => {
           alt={dinosaur.name}
           className="w-full h48 object-cover rounded mb-4"
         />
-        <h2 className="text-xl font-bold mb-2 text-center">{dinosaur.name}</h2>
-        <p className="text-gray-300 text-sm text-center">
-          {dinosaur.description}
-        </p>
+        <div className="mt-auto text-center">
+          <h2 className="text-xl font-bold mb-2">{dinosaur.name}</h2>
+          <p className="text-gray-300 text-sm">
+            {dinosaur.description}
+          </p>
+        </div>
       </div>
     </div>
   );

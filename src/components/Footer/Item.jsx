@@ -1,6 +1,6 @@
 import React from "react";
 
-const Item = ({ Links, title }) => {
+const Item = ({ Links, title, t }) => {
   return (
     <ul>
       <h1 className="mb-1 font-semibold">{title}</h1>
@@ -11,7 +11,7 @@ const Item = ({ Links, title }) => {
           text-sm cursor-pointer leading-6"
             href={link.link}
           >
-            {link.name}
+            {t(`Footer.items.${link.name}`)}
           </a>
         </li>
       ))}

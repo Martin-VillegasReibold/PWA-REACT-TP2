@@ -6,7 +6,7 @@ const Header = ({ filtro, t }) => {
   const [categories, setCategories] = useState([]);
   const [showCategories, setShowCategories] = useState("");
   return (
-    <nav className="... sticky top-0">
+    <nav className="... sticky top-0 bg-gray-950 z-50">
       <div className="relative flex gap-4 justify-between items-center mb-2">
         <Link to={"/"} className="flex gap-2">
           <img src="\klipartz.com.png" className="w-12" alt="Logo" />

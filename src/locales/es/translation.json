@@ -23,8 +23,22 @@
         "itemContainer":{
             "products": "PRODUCTOS",
             "resources": "RECURSOS",
-            "team": "NOSOTROS",
+            "team": "EQUIPO",
             "support": "SOPORTE"
+        },
+        "items": {
+            "ProjectManager": "Gestor PyS",
+            "DinoWiki": "Dinowiki",
+            "ComingSoon": "Proximamente",
+            "NodeJs": "NodeJS",
+            "TailwindCSS": "Tailwind CSS",
+            "React-Router": "React Router",
+            "Ionicons": "Ionicons",
+            "Andrés": "Andrés",
+            "Martín": "Martín",
+            "Juan": "Juan",
+            "Documentation": "Documentación",
+            "Tutorial": "Tutorial"
         },
         "rights": "© 2025 Aplicado. Todos los derechos reservados.",
         "policy": "Terminos. Politica de privacidad"
