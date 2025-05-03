@@ -6,7 +6,16 @@
         "title": "Dinosaurios Favoritos"
     },
     "Details": {
-        "title": "Detalles"
+        "title": "Detalles",
+        "detailsDinosaur":{
+            "name": "Nombre",
+            "period": "Periodo",
+            "diet": "Dieta",
+            "length": "Longitud",
+            "weight": "Peso",
+            "location": "Locación",
+            "description": "Descripción"
+        }
     },
     "Header": {
         "something": "algo",
@@ -42,6 +51,9 @@
         },
         "rights": "© 2025 Aplicado. Todos los derechos reservados.",
         "policy": "Terminos. Politica de privacidad"
+    },
+    "Button": {
+        "seeDetails": "Ver Detalles"
     },
     "notFound": "No se encontraron elementos"
 }

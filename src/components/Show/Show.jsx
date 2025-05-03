@@ -64,6 +64,7 @@ const Show = ({ texto, homefav, t }) => {
                       dinosaur={dinosaur}
                       fav={favorites}
                       setfav={setFavorites}
+                      t={t}
                     />
                   ))
                 ) : (

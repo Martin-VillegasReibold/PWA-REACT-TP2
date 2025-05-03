@@ -1,6 +1,6 @@
 import Home from "./Pages/Home/Home.jsx";
 import { BrowserRouter, Route, Routes } from "react-router";
-import Details from "./pages/Details/Details.jsx";
+import Details from "./Pages/Details/Details.jsx";
 import Favorites from "./Pages/Favorites/Favorites.jsx";
 import { ROUTES } from "./const/routes.js";
 import { useTranslation } from "react-i18next";

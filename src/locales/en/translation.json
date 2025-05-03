@@ -6,7 +6,16 @@
         "title": "Favorites Dinosaurs"
     },
     "Details": {
-        "title": "Details"
+        "title": "Details",
+        "detailsDinosaur":{
+            "name": "Name",
+            "period": "Period",
+            "diet": "Diet",
+            "length": "Length",
+            "weight": "Weight",
+            "location": "Location",
+            "description": "Description"
+        }
     },
     "Header": {
         "something": "something",
@@ -42,6 +51,10 @@
         },
         "rights": "© 2025 Applied. All rights reserved.",
         "policy": "Terms. Privacy policy"
+    },
+
+    "Button": {
+        "seeDetails": "See Details"
     },
     "notFound": "No items found"
 }
