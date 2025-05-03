@@ -52,7 +52,7 @@ const Show = ({ texto, homefav, t }) => {
     <div>
       <div className="bg-gray-950 text-white min-h-screen">
         <div className="container px-6 py-4 mx-auto">
-          <Header filtro={fil} t={t}/>
+          <Header filtro={fil} t={t} />
           <main>
             <Subtitle text={texto} />
             <div className="py-8 px-4">
@@ -72,7 +72,7 @@ const Show = ({ texto, homefav, t }) => {
               </div>
             </div>
           </main>
-          <Footer t={t}/>
+          <Footer t={t} />
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 const DinosaurCard = ({ dinosaur, fav, setfav }) => {
   const { i18n } = useTranslation();
   const lang = i18n.language;
-  console.log(lang);
+  //console.log(lang);
   
   return (
     <div className="border border-white rounded-lg overflow-hidden shadow-lg bg-gray-900 flex felx-col w-64 p-4">

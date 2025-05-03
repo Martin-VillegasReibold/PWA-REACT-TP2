@@ -26,9 +26,9 @@ function App() {
         />
       </div>
       <Routes>
-        <Route element={<Home t={t}/>} path={ROUTES.home} />
-        <Route element={<Details t={t}/>} path={ROUTES.details} />
-        <Route element={<Favorites t={t}/>} path={ROUTES.favorites}/>
+        <Route element={<Home t={t} />} path={ROUTES.home} />
+        <Route element={<Details t={t} />} path={ROUTES.details} />
+        <Route element={<Favorites t={t} />} path={ROUTES.favorites} />
       </Routes>
     </BrowserRouter>
   );
