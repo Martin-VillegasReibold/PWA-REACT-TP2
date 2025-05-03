@@ -21,11 +21,11 @@ Tener instalado:
 
 - [Node.js](https://nodejs.org/): Un popular entorno de programación que puede utilizarse para crear aplicaciones a gran escala que necesiten soportar múltiples peticiones concurrentes
 
-- [Tailwind] (https://tailwindcss.com): Un framework de utilidades para estilos rápidos y consistentes(CSS).
+- [Tailwind](https://tailwindcss.com): Un framework de utilidades para estilos rápidos y consistentes(CSS).
 
-- [React-Router] (https://reactrouter.com): Herramienta para la gestión de rutas dentro de aplicaciones React.
+- [React-Router](https://reactrouter.com): Herramienta para la gestión de rutas dentro de aplicaciones React.
 
-- [i18next] (https://www.i18next.com): Una biblioteca de React que facilita la internacionalización y localización de aplicaciones web
+- [i18next](https://www.i18next.com): Una biblioteca de React que facilita la internacionalización y localización de aplicaciones web
 
 ### Instalación
 
