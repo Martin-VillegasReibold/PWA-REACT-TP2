@@ -12,11 +12,20 @@ preferencias del usuario. Se tendrá una página de home donde muestre una lista
 y permita al usuario ver detalles adicionales al hacer click en un elemento. También se desarrollará una página 
 de elementos favoritos del usuario.
 
+
 ## Instalación / visualización
 
 ### Requisitos
 
-- Tener instalado [Node.js](https://nodejs.org/)
+Tener instalado:
+
+- [Node.js](https://nodejs.org/): Un popular entorno de programación que puede utilizarse para crear aplicaciones a gran escala que necesiten soportar múltiples peticiones concurrentes
+
+- [Tailwind](https://tailwindcss.com): Un framework de utilidades para estilos rápidos y consistentes(CSS).
+
+- [React-Router](https://reactrouter.com): Herramienta para la gestión de rutas dentro de aplicaciones React.
+
+- [i18next](https://www.i18next.com): Una biblioteca de React que facilita la internacionalización y localización de aplicaciones web
 
 ### Instalación
 
@@ -30,6 +39,21 @@ git clone https://github.com/Martin-VillegasReibold/PWA-REACT-TP2.git
 
 ```bash
 npm install
+```
+- Tailwind
+
+```bash
+npm install tailwindcss @tailwindcss/vite
+```
+- React-Router
+
+```bash
+npm i react-router
+```
+- i18next
+
+```bash
+npm install i18n --save
 ```
 
 ### Visualización
