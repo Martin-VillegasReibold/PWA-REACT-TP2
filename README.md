@@ -27,6 +27,8 @@ Tener instalado:
 
 - [i18next](https://www.i18next.com): Una biblioteca de React que facilita la internacionalización y localización de aplicaciones web
 
+-[jsPDF-html2canvas](https://www.npmjs.com/package/jspdf-html2canvas): html2canvas y jsPDF son dos librerías JavaScript que se usan para generar PDFs a partir de HTML, utilizando el navegador del usuario.
+
 ### Instalación
 
 1. Clonar el repositorio:
@@ -54,6 +56,12 @@ npm i react-router
 
 ```bash
 npm install i18n --save
+```
+
+- jsPDF-html2canvas
+
+```bash
+npm i jspdf html2canvas
 ```
 
 ### Visualización
