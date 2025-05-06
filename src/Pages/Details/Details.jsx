@@ -1,15 +1,50 @@
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Subtitle from "../../components/Subtitle/Subtitle";
-import { useLocation } from "react-router";
+import AddFav from "../../components/AddFav/AddFav";
 import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import Button from "../../components/Button/Button";
 
 const Details = ({ t }) => {
-  const location = useLocation();
-  const stateDinosaur = location.state?.dinosaur;
+
+  const {id} = useParams();
+  const [dinosaur, setDinosaur] = useState();
+  const navigate = useNavigate();
+
+  const getDinosaur = async () => {
+    try {
+      const dinoResult = await fetch(
+        `https://680fa72e67c5abddd1962419.mockapi.io/api/v1/dinosaurios/${id}`,
+      );
+
+      const dino = await dinoResult.json();
+
+      if (!dino.id) {
+        navigate("/404");
+      } else {
+        setDinosaur(dino);
+      }
+
+    } catch (error) {
+      console.log(`ERROR DESDE CONSOLA: ${error}`);
+    }
+  };
+
+  useEffect(() => {
+    getDinosaur();
+  }, [id]);
+
+  const [favorites, setFavorites] = useState(
+    JSON.parse(localStorage.getItem("favorites")) || []
+  );
+
+  useEffect(() => {
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+  }, [favorites]);
 
   const { i18n } = useTranslation();
   const lang = i18n.language;
@@ -26,54 +61,56 @@ const Details = ({ t }) => {
       const imgData = canvas.toDataURL("img/png");
       const pdf = new jsPDF("p", "mm", "a4");
       pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
-      pdf.save(stateDinosaur.name);
+      pdf.save(dinosaur.name);
     });
   };
 
-  return (
-    <div className="bg-gray-950 text-white min-h-screen">
+  return dinosaur ? (
+    <div className="bg-black text-white min-h-screen">
       <div className="container px-6 py-4 mx-auto">
         <Header t={t} />
         <main id="Main" className="bg-black">
-          <Subtitle text={t("Details.title")} />
-          {stateDinosaur && (
             <div className="flex-1 flex flex-col">
+              <Subtitle text={t("Details.title")} />
               <img
-                src={stateDinosaur.image}
-                alt={stateDinosaur.name}
+                src={dinosaur.image}
+                alt={dinosaur.name}
                 className="w-full h48 object-cover rounded mb-4"
               />
               <div className="mt-auto text-center">
                 <h2 className="text-xl font-bold mb-2">
-                  {t("Details.detailsDinosaur.name")}: {stateDinosaur.name}
+                  {t("Details.detailsDinosaur.name")}: {dinosaur.name}
                 </h2>
                 <h3 className="text-xl font-bold mb-2">
                   {t("Details.detailsDinosaur.period")}:{" "}
-                  {stateDinosaur.period[lang]}
+                  {dinosaur.period[lang]}
                 </h3>
                 <h3 className="text-xl font-bold mb-2">
                   {t("Details.detailsDinosaur.diet")}:{" "}
-                  {stateDinosaur.diet[lang]}
+                  {dinosaur.diet[lang]}
                 </h3>
                 <h3 className="text-xl font-bold mb-2">
                   {t("Details.detailsDinosaur.length")}:{" "}
-                  {stateDinosaur.length[lang]}
+                  {dinosaur.length[lang]}
                 </h3>
                 <h3 className="text-xl font-bold mb-2">
                   {t("Details.detailsDinosaur.weight")}:{" "}
-                  {stateDinosaur.weight[lang]}
+                  {dinosaur.weight[lang]}
                 </h3>
                 <h3 className="text-xl font-bold mb-2">
                   {t("Details.detailsDinosaur.location")}:{" "}
-                  {stateDinosaur.location[lang]}
+                  {dinosaur.location[lang]}
                 </h3>
                 <h3 className="text-xl font-bold mb-2">
                   {t("Details.detailsDinosaur.description")}:{" "}
-                  {stateDinosaur.description[lang]}
+                  {dinosaur.description[lang]}
+                </h3>
+                <h3 className="text-xl font-bold mb-2">
+                  {t("Details.detailsDinosaur.favorite")} {" "}
+                  <AddFav itemId={dinosaur.id} favorites={favorites} setFavorites={setFavorites} />
                 </h3>
               </div>
             </div>
-          )}
         </main>
         <div className="flex flex-wrap justify-center gap-8 py-6">
           <Button text={"Print PDF"} onClick={() => exportPDF()} />
@@ -81,7 +118,7 @@ const Details = ({ t }) => {
         <Footer t={t} />
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default Details;

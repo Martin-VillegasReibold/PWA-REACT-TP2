@@ -14,8 +14,13 @@
             "length": "Length",
             "weight": "Weight",
             "location": "Location",
-            "description": "Description"
+            "description": "Description",
+            "favorite": "Favorite?"
         }
+    },
+    "Error": {
+        "title": "Error 404",
+        "detail": "Page was not found"
     },
     "Header": {
         "something": "something",

@@ -14,8 +14,13 @@
             "length": "Longitud",
             "weight": "Peso",
             "location": "Locación",
-            "description": "Descripción"
+            "description": "Descripción",
+            "favorite": "¿Favorito?"
         }
+    },
+    "Error": {
+        "title": "Error 404",
+        "detail": "Página no encontrada"
     },
     "Header": {
         "something": "algo",

@@ -1,5 +1,6 @@
 export const ROUTES = {
     home:  "/",
-    details: "/details",
+    details: "/details/:id",
     favorites: "/favorites",
+    error404: "*"
 }

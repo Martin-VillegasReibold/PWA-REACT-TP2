@@ -50,7 +50,7 @@ const Show = ({ texto, homefav, t }) => {
 
   return (
     <div>
-      <div className="bg-gray-950 text-white min-h-screen">
+      <div className="bg-black text-white min-h-screen">
         <div className="container px-6 py-4 mx-auto">
           <Header filtro={fil} t={t} />
           <main>

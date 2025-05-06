@@ -1,7 +1,6 @@
 import AddFav from "../AddFav/AddFav";
 import { useTranslation } from "react-i18next";
 import Button from "../Button/Button";
-import { ROUTES } from "../../const/routes";
 import { useNavigate } from "react-router";
 
 const DinosaurCard = ({ dinosaur, fav, setfav, t }) => {
@@ -10,7 +9,7 @@ const DinosaurCard = ({ dinosaur, fav, setfav, t }) => {
   const navigate = useNavigate();
 
   const onClickNavigateToDetailsHandler = () => {
-    navigate(`${ROUTES.details}`, { state: { dinosaur: dinosaur } });
+    navigate(`../details/${dinosaur.id}`, { state: { fav: fav } });
   };
 
   return (
