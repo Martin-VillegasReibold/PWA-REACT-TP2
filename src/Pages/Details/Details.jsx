@@ -10,15 +10,14 @@ import jsPDF from "jspdf";
 import Button from "../../components/Button/Button";
 
 const Details = ({ t }) => {
-
-  const {id} = useParams();
+  const { id } = useParams();
   const [dinosaur, setDinosaur] = useState();
   const navigate = useNavigate();
 
   const getDinosaur = async () => {
     try {
       const dinoResult = await fetch(
-        `https://680fa72e67c5abddd1962419.mockapi.io/api/v1/dinosaurios/${id}`,
+        `https://680fa72e67c5abddd1962419.mockapi.io/api/v1/dinosaurios/${id}`
       );
 
       const dino = await dinoResult.json();
@@ -28,7 +27,6 @@ const Details = ({ t }) => {
       } else {
         setDinosaur(dino);
       }
-
     } catch (error) {
       console.log(`ERROR DESDE CONSOLA: ${error}`);
     }
@@ -70,50 +68,55 @@ const Details = ({ t }) => {
       <div className="container px-6 py-4 mx-auto">
         <Header t={t} />
         <main id="Main" className="bg-black">
-            <div className="flex-1 flex flex-col">
-              <Subtitle text={t("Details.title")} />
-              <img
-                src={dinosaur.image}
-                alt={dinosaur.name}
-                className="w-full h48 object-cover rounded mb-4"
-              />
-              <div className="mt-auto text-center">
-                <h2 className="text-xl font-bold mb-2">
-                  {t("Details.detailsDinosaur.name")}: {dinosaur.name}
-                </h2>
-                <h3 className="text-xl font-bold mb-2">
-                  {t("Details.detailsDinosaur.period")}:{" "}
-                  {dinosaur.period[lang]}
-                </h3>
-                <h3 className="text-xl font-bold mb-2">
-                  {t("Details.detailsDinosaur.diet")}:{" "}
-                  {dinosaur.diet[lang]}
-                </h3>
-                <h3 className="text-xl font-bold mb-2">
-                  {t("Details.detailsDinosaur.length")}:{" "}
-                  {dinosaur.length[lang]}
-                </h3>
-                <h3 className="text-xl font-bold mb-2">
-                  {t("Details.detailsDinosaur.weight")}:{" "}
-                  {dinosaur.weight[lang]}
-                </h3>
-                <h3 className="text-xl font-bold mb-2">
-                  {t("Details.detailsDinosaur.location")}:{" "}
-                  {dinosaur.location[lang]}
-                </h3>
-                <h3 className="text-xl font-bold mb-2">
-                  {t("Details.detailsDinosaur.description")}:{" "}
-                  {dinosaur.description[lang]}
-                </h3>
-                <h3 className="text-xl font-bold mb-2">
-                  {t("Details.detailsDinosaur.favorite")} {" "}
-                  <AddFav itemId={dinosaur.id} favorites={favorites} setFavorites={setFavorites} />
-                </h3>
-              </div>
+          <div className="flex-1 flex flex-col">
+            <Subtitle text={t("Details.title")} />
+            <img
+              src={dinosaur.image}
+              alt={dinosaur.name}
+              className="w-full h48 object-cover rounded mb-4"
+            />
+            <div className="mt-auto text-center">
+              <h2 className="text-xl font-bold mb-2">
+                {t("Details.detailsDinosaur.name")}: {dinosaur.name}
+              </h2>
+              <h3 className="text-xl font-bold mb-2">
+                {t("Details.detailsDinosaur.period")}: {dinosaur.period[lang]}
+              </h3>
+              <h3 className="text-xl font-bold mb-2">
+                {t("Details.detailsDinosaur.diet")}: {dinosaur.diet[lang]}
+              </h3>
+              <h3 className="text-xl font-bold mb-2">
+                {t("Details.detailsDinosaur.length")}: {dinosaur.length[lang]}
+              </h3>
+              <h3 className="text-xl font-bold mb-2">
+                {t("Details.detailsDinosaur.weight")}: {dinosaur.weight[lang]}
+              </h3>
+              <h3 className="text-xl font-bold mb-2">
+                {t("Details.detailsDinosaur.location")}:{" "}
+                {dinosaur.location[lang]}
+              </h3>
+              <h3 className="text-xl font-bold mb-2">
+                {t("Details.detailsDinosaur.description")}:{" "}
+                {dinosaur.description[lang]}
+              </h3>
             </div>
+          </div>
         </main>
         <div className="flex flex-wrap justify-center gap-8 py-6">
-          <Button text={"Print PDF"} onClick={() => exportPDF()} />
+          <h3 className="text-xl font-bold mb-2">
+            {t("Details.detailsDinosaur.favorite")}{" "}
+            <div className="flex flex-wrap justify-center">
+            <AddFav
+              itemId={dinosaur.id}
+              favorites={favorites}
+              setFavorites={setFavorites}
+            />
+            </div>
+          </h3>
+          <Button
+            text={t("Details.detailsDinosaur.print")}
+            onClick={() => exportPDF()}
+          />
         </div>
         <Footer t={t} />
       </div>

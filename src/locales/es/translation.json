@@ -15,7 +15,8 @@
             "weight": "Peso",
             "location": "Locación",
             "description": "Descripción",
-            "favorite": "¿Favorito?"
+            "favorite": "¿Favorito?",
+            "print": "Exportar PDF"
         }
     },
     "Error": {
