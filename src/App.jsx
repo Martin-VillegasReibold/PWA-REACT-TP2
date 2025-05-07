@@ -15,7 +15,7 @@ function App() {
     localStorage.setItem("i18nextLng", newLang);
   };
 
-  const flagSrc = i18n.language === "es" ? "./img/ES.png" : "./img/GB.png";
+  const flagSrc = i18n.language === "es" ? "/img/ES.png" : "/img/GB.png";
 
   return (
     <BrowserRouter>
